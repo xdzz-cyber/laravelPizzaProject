@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/pizza', function () {
-    return view("pizza");
+Route::get('/pizzas', function () {
+    $data = ["type"=>"neeType", "skills"=>["fSkill","sSkill"]];
+    return view("pizzas", $data);
 });
