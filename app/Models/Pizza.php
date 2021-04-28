@@ -10,6 +10,8 @@ class Pizza extends Model
     use HasFactory;
 
     // protected $table = "somename";
-
     
+    protected $casts = [
+        "toppings"=>"array"
+    ];
 }
