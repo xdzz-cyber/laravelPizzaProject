@@ -11,6 +11,13 @@
             <li>{{$topping}}</li>
         @endforeach
     </ul>
+
+    <form method="post" action="/pizzas/{{$pizza->id}}">
+        @csrf
+        @method("DELETE")
+        <button class="btn btn-primary" type="submit">Complete order</button>
+    </form>
+
 </div>
 <a href="/pizzas" class="back">Go back to pizzas page</a>
 @endsection
